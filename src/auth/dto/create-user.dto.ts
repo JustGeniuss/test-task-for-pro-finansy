@@ -1,11 +1,13 @@
-import { IsEmail, IsString, Length } from 'class-validator';
+import { IsString, Length } from 'class-validator';
 
 export class CreateUserDto {
-  @IsString({ message: 'Должно быть строкой' })
-  @IsEmail({}, { message: 'Некорректный email' })
-  readonly email: string;
+  @IsString({ message: 'Имя пользователя должно быть строкой' })
+  @Length(4, 16, {
+    message: 'Имя пользователя должно быть не меньше 4 и не больше 16',
+  })
+  readonly username: string;
 
-  @IsString({ message: 'Должно быть строкой' })
-  @Length(4, 16, { message: 'Не меньше 4 и не больше 16' })
+  @IsString({ message: 'Пароль должен быть строкой' })
+  @Length(4, 16, { message: 'Пароль должен быть не меньше 4 и не больше 16' })
   readonly password: string;
 }
