@@ -8,10 +8,10 @@
 
 
 
-# Server
-Для запуска:
-1. npm i
+# Для запуска:
+1. Установить зависимости: npm ci
 2. Создать файл .env и положить туда:
+```bash
 PORT=3000
 POSTGRES_HOST=localhost
 POSTGRES_USER=postgres
@@ -25,6 +25,7 @@ RT_SECRET="rt_secret"
 AT_EXPIRES="15m"
 RT_EXPIRES="7d"
 SESSION_MAX_AGE=360000
+```
 3. Изменить конфиг для Postgresql
 4. Запустить редис в Docker: npm run docker:compose
 5. Запустить приложение: npm run start:dev
