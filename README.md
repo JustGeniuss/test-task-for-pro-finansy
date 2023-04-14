@@ -27,5 +27,6 @@ RT_EXPIRES="7d"
 SESSION_MAX_AGE=360000
 ```
 3. Изменить конфиг для Postgresql
-4. Запустить редис в Docker: npm run docker:compose
-5. Запустить приложение: npm run start:dev
+4. Создать БД с нужным названием
+5. Запустить редис в Docker: npm run docker:compose
+6. Запустить приложение: npm run start:dev
